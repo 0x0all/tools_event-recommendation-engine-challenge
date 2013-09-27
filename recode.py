@@ -1,18 +1,13 @@
 """
-
 a;b;c;d
 e;v;d;w
 r;h;d;d
 e;v;d;q
-
 ->
-
 a;b;c;1
 e;v;d;2
 r;h;d;1
 e;v;d;3
-
-
 """
 
 import time
@@ -28,9 +23,7 @@ idx = []
 unic = []
 for line in in_.xreadlines():
     l = line.strip().split(";")
-    zn = zlib.crc32(l[my_index]) 
-    l[my_index] =  zn
-    unic.append(zn)
+    unic.append(l[my_index])
     idx.append(l)
 in_.close()
 
